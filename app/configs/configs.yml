@@ -1,0 +1,25 @@
+jira:
+  url:
+  user:
+  passwd:
+  project_key:
+  issue_name:
+  auto_resolved: True
+  supress_threshold: 4
+  sva_severity:
+    Highest: 9
+    High: 7
+    Medium: 4
+    Low: 1
+  event_severity:
+    critical: High
+    non_critical: Low
+  resolution_workflow:
+    comment:
+      body: "Ticket is resolved based on security events in CloudPassage"
+    transition:
+      id: 31
+target_events:
+  - vulnerable_software_package_found
+  - sca_rule_failed
+  - issue_resolved
